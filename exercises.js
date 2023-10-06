@@ -65,4 +65,40 @@ function methods() {
 	let first5 = str.substring(0, 5)  // 01234
 	console.log('Methods 21', first5)
 }
-methods()
+// methods()
+
+
+function classicForLoops() {
+	// 1 Skapa en loop som itererar 1000 varv. För varje iteration ska du console.log() vilket varv du är på
+	// Räkna antalet varv med "i"  (i står ofta för "index")
+	for( let i=0; i < 1000; i++ ) {
+		console.log('For 1. Varv ', i + 1)
+	}
+
+	// 2:   i=100, i > 0, i--
+
+	// 3 Loopa ut ovanstående array med en for-loop. För varje varv ska du console.log() innehållet ( frukten ).
+	let fruits = ['apple', 'orange', 'pear', 'kiwi', 'pineapple'];
+	for( let i=0; i < fruits.length; i++ ) {
+		console.log('For 3', fruits[i])
+	}
+
+	// 7 Sök i en array: Skapa en funktion som tar en array och ett sökord som argument och returnerar alla element som innehåller sökordet.
+	let testData = ['baseball', 'chipmunk', 'javascript', 'css', 'web development', 'server']
+	function searchArray(array, searchWord) {
+		let matches = []
+		for( let i=0; i < array.length; i++ ) {
+			// 'baseball'.includes('munk')
+			// 'chipmunk'.includes('munk')
+			if( array[i].includes(searchWord) ) {
+				matches.push(array[i])
+			}
+		}
+		return matches
+	}
+	let searchResults = searchArray(testData, 's')
+	for( let i=0; i < searchResults.length; i++ ) {
+		console.log('For 7. Sökningen hittade: ', searchResults[i])
+	}
+}
+classicForLoops()
