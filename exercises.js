@@ -101,4 +101,41 @@ function classicForLoops() {
 		console.log('For 7. Sökningen hittade: ', searchResults[i])
 	}
 }
-classicForLoops()
+// classicForLoops()
+
+
+function forEachExamples() {
+	// Samma resultat på 4 olika sätt
+
+	let things = ['hammer', 'nails', 'ruler', 'screwdriver', 'screws', 'saw'];
+	// Loopa ut ovanstående array och console.log() varje pryl.
+
+	for( let i=0; i<things.length; i++ ) {
+		console.log('ForEach 7a ', things[i])
+	}
+	for( let item of things ) {
+		console.log('ForEach 7b ', item)
+	}
+	things.forEach(withEach1)  // skicka själva funktionen till forEach
+	// things.forEach(withEach1())  // skicka retur-värdet till forEach
+	// Obs! forEach ska bestämma när funktionen anropas!!
+
+	function withEach1(item) {
+		console.log('ForEach 7c ', item)
+	}
+	things.forEach((item, index) => {
+		console.log('ForEach 7d ', item, index)
+	})
+
+	// Spara en arrow function i en variabel
+	const exempel = x => x + 1
+	exempel(5) // returnerar 6
+	/*
+	Man kan skriva en funktion på flera sätt:
+	function f(x) { return x + 1 }
+	(x) => { return x + 1 }
+	(x) => x + 1
+	x => x + 1
+	*/
+}
+forEachExamples()
