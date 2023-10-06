@@ -29,3 +29,25 @@ for( let i=1; i<=10; i++ ) {
 6 % 2 === 0
 
 */
+
+
+
+// 5 Skapa en sida med en enkel meny där användaren kan ändra bakgrundsfärg baserat på användarens val. index.html kan se ut så här.
+
+// 1. plocka ut elementen (buttons, body)
+// 2. lägg till event listener på varje button
+// 3. vid klick: ändra CSS background-color för body (.style eller .classList)
+
+const body = document.querySelector('body')
+console.log('Finns body?', body)
+const redButton = document.querySelector('#redButton')
+const blueButton = document.querySelector('#blueButton')
+const greenButton = document.querySelector('#greenButton')
+// console.log('Finns red button?', redButton)
+
+redButton.addEventListener('click', () => {
+	// body.style.backgroundColor = 'red' <- funkar
+	body.className = 'red'  // <- best practice
+})
+blueButton.addEventListener('click', () => { body.className = 'blue' })
+greenButton.addEventListener('click', () => { body.className = 'green' })

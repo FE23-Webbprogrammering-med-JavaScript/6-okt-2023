@@ -11,3 +11,13 @@ Id, klass, element- kategorierna
 .odd -> klass,   010
 li   -> element, 001
 */
+
+.red {
+	background-color: rgb(243, 186, 186);
+}
+.blue {
+	background-color: rgb(140, 174, 233);
+}
+.green {
+	background-color: rgb(159, 232, 160);
+}
