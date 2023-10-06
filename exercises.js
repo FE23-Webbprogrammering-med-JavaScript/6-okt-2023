@@ -138,4 +138,65 @@ function forEachExamples() {
 	x => x + 1
 	*/
 }
-forEachExamples()
+// forEachExamples()
+
+
+function moreLoops() {
+	// 9 While loop
+	// let i=0; i<array.length; i++
+	let count = 0
+	while( count < 1000 ) {
+		console.log('While loop', count)
+		count++
+	}
+	// Alternativ syntax:
+	// do { } while( count < 1000 );
+
+	// Loop da loops 10-11
+	// 10 Generera en kortlek med 52 kort där varje kort innehåller en färg ( suite ) och ett värde mellan 2 och 14 ( ess ).
+
+	let cards = []
+	// 'hjärter', ruter, klöver, spader
+	const values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "knekt", "dam", "kung", "ess"];
+	for( let value of values ) {
+		cards.push(`hjärter ${value}`)
+		cards.push(`ruter ${value}`)
+		cards.push(`spader ${value}`)
+		cards.push(`klöver ${value}`)
+	}
+	console.log('Kortlek', cards)
+
+	let friends = [
+		{
+			name: 'Sixten',
+			likes: [
+				'bananas',
+				'strawberries',
+				'blueberries'
+			]
+		},
+		{
+			name: 'Khalid',
+			likes: [
+				'papaya',
+				'pear',
+				'pineapple'
+			]
+		},
+		{
+			name: 'Lisa',
+			likes: [
+				'raspberries',
+				'watermelon',
+				'apple'
+			]
+		}
+	]
+	friends.forEach(friend => {
+		friend.likes.forEach(fruit => {
+			console.log('Fruit', fruit)
+		})
+	})
+}
+moreLoops()
+
