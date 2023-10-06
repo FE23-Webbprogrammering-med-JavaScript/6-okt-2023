@@ -1,0 +1,13 @@
+.odd {
+	font-weight: bold;
+	background-color: rgb(232, 218, 163);
+}
+li {
+	background-color: rgb(221, 129, 59);
+}
+
+/* Den sista vinner - om lika specificitet
+Id, klass, element- kategorierna
+.odd -> klass,   010
+li   -> element, 001
+*/
